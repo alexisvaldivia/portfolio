@@ -9,8 +9,7 @@
 
      body {
          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-         background-color: #fafafa;
-         color: rgb(37, 37, 37);
+         background-color: #758694;
      }
 
      hr {
@@ -23,7 +22,7 @@
 
      main {
          max-width: 768px;
-         background-color: #fff;
+         background-color: #405D72;
          margin: auto;
          border-radius: 10px;
          padding: 2rem;
@@ -33,25 +32,32 @@
          padding: 10px 20px;
          margin: 0 auto;
          max-width: 768px;
-     }
 
-     nav ul {
-         list-style-type: none;
-         margin: 0;
-         padding: 0;
-         display: flex;
-         justify-content: space-around;
-     }
+         nav {
+             & ul {
+                 list-style-type: none;
+                 margin: 0;
+                 padding: 0;
+                 display: flex;
+                 justify-content: space-around;
 
-     nav a {
-         text-decoration: none;
-         color: #333;
-         font-weight: bold;
-     }
+                 & a {
+                     text-decoration: none;
+                     color: #fff;
+                     font-weight: bold;
 
-     nav a:hover {
-        filter: brightness(2);
-        border-bottom: solid 1px black;
+
+                 }
+
+                 & a:hover {
+                     opacity: 0.5;
+
+                 }
+             }
+
+
+         }
+
      }
 
      .profile {
@@ -60,117 +66,143 @@
          align-items: center;
          justify-content: left;
          gap: 1rem;
+
+         #img-container {
+             border-radius: 50%;
+             width: 130px;
+             height: 130px;
+             border-radius: 15px;
+
+             & img {
+                 border-radius: 50%;
+                 width: 130px;
+                 height: 130px;
+                 border: solid 10px #fff3ea;
+                 object-fit: cover;
+                 box-shadow: 0px -1px 3px 3px rgba(191, 191, 191, 0.75);
+                 -webkit-box-shadow: 0px -1px 3px 3px rgba(191, 191, 191, 0.75);
+                 -moz-box-shadow: 0px -1px 3px 3px rgba(191, 191, 191, 0.75);
+             }
+         }
+
+         & h1 {
+             font-size: 2rem;
+             color: #fff3ea;
+         }
+
+         & h2 {
+             color: #f7ddcc;
+             padding: 1rem 0;
+         }
+
+         & #tecnologias {
+             color: #fff;
+             font-weight: bolder;
+             letter-spacing: 1.5px;
+         }
      }
 
-     .profile h1 {
-         font-size: 2rem;
-     }
-
-     .profile h2 {
-
-         color: #8d7657;
-         font-weight: 900;
-     }
-
-     #tecnologias {
-         color: #8d7657;
-         font-weight: 900;
-         letter-spacing: 1.5px;
-     }
-
-     #img-container {
-         border-radius: 50%;
-         width: 130px;
-         height: 130px;
-         border-radius: 15px;
-     }
-
-     .profile img {
-         border-radius: 50%;
-         width: 130px;
-         height: 130px;
-         border: solid 10px #fff;
-         object-fit: cover;
-         box-shadow: 0px -1px 3px 3px rgba(191, 191, 191, 0.75);
-         -webkit-box-shadow: 0px -1px 3px 3px rgba(191, 191, 191, 0.75);
-         -moz-box-shadow: 0px -1px 3px 3px rgba(191, 191, 191, 0.75);
-     }
-
-
-     h2 {
-         color: #8e8e82;
-         margin: 1rem 0;
-         color: rgb(100, 87, 67);
-
-     }
-
-     ul {
-         list-style-type: none;
-         padding: 0;
-         max-width: 90%;
-     }
-
-     ul h3 {
-         color: #8e8e82;
-     }
-
-     .cards {
+     #studies {
          display: flex;
-         flex-wrap: wrap;
          flex-direction: column;
-         gap: 3rem;
-     }
-
-     .card {
-         display: flex;
-         flex-direction: row;
          gap: 1rem;
+         color: #f7ddcc;
 
+         h2 {
+             color: #fff3ea;
+         }
 
-     }
-
-     @media (max-width: 1024px) {
-         .card {
-
-             flex-direction: column;
-             align-items: center;
-             justify-content: center;
+         p {
+             color: #fff;
          }
 
      }
 
-     .card-description {
+
+     #projects {
          display: flex;
          flex-direction: column;
-     }
+         gap: 1rem;
 
-     .card-description h3 {
-         font-size: 1.5rem;
-         color: #8e8e82;
-     }
+         h2 {
+             color: #fff3ea;
+         }
 
-     .card img {
-         width: 250px;
-         border-radius: 10px;
-     }
+         .cards {
+             display: flex;
+             flex-wrap: wrap;
+             flex-direction: column;
+             gap: 3rem;
 
 
-     .card a {
-         color: rgb(192, 162, 119);
 
-         text-decoration: none;
-         font-weight: bold;
-         display: inline-block;
-         margin-top: 10px;
+             .card {
+                 display: flex;
+                 flex-direction: row;
+                 gap: 1rem;
+
+
+
+                 img {
+                     width: 250px;
+                     border-radius: 10px;
+                 }
+
+
+
+                 .card-description {
+                     display: flex;
+                     flex-direction: column;
+                     align-items: start;
+                     justify-content: start;
+                     gap: 10px;
+
+                     h3 {
+                         color: #f7ddcc
+                     }
+
+                     p {
+                         color: #fff;
+                     }
+
+                     a {
+                         color: #FFF8F3;
+                         text-decoration: none;
+                         font-weight: bold;
+                         margin-top: auto;
+                         align-self: end;
+                     }
+
+                     a:hover {
+                         opacity: 0.5;
+                     }
+                 }
+
+
+
+             }
+
+             @media (max-width: 1024px) {
+                 .card {
+                     flex-direction: column;
+                     align-items: center;
+                     justify-content: center;
+                 }
+
+             }
+         }
+
+
      }
 
      footer {
-         padding: 2rem;
+         padding: 2rem 0;
          max-width: 768px;
          margin: auto;
-         background-color: #fff;
-         color: #696969;
+         background-color: #758694;
+         color: #f7ddcc;
          font-size: 1rem;
+         font-weight: 600;
      }
 
      @media (max-width: 768px) {
