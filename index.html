@@ -5,72 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+
     <title>Mi Portafolio</title>
     <script src="https://kit.fontawesome.com/4e9464c786.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#studies"><i class="fa-solid fa-graduation-cap fa-lg"></i> Estudios</a></li>
-                <li><a href="#projects"><i class="fa-solid fa-briefcase fa-lg"></i> Proyectos</a></li>
-                <li><a href="https://github.com/alexisvaldivia" target="_blank"><i
-                            class="fa-brands fa-github fa-xl"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/alexis-valdivia/" target="_blank"><i
-                            class="fa-brands fa-linkedin fa-xl"></i></a></li>
-            </ul>
-        </nav>
-    </header>
+    <aside class="sidebar">Nav</aside>
     <main>
-        <section id="about">
+        <section>
             <div class="profile">
-                <div id="img-container">
-                    <img src="./img/me.webp" alt="Mi Foto">
-                </div>
+                <img src="./img/me.webp" alt="Mi Foto">
                 <div class="description">
-                    <h1>Alexis Valdivia</h1>
-                    <h2>
-                        <code>Desarrollador Web</code>
-                    </h2>
-                    <h3>
-                        <code id="tecnologias">HTML CSS JavaScript React Redux Bootstrap TailwindCSS</code>
-                    </h3>
+                    <h1>
+                        <span>Alexis Valdivia</span>
+                        <a href="linkedin.com/in/alexis-valdivia">
+                            Disponible para
+                            Trabajar</a>
+                    </h1>
+                    <p>
+                        Apasionado <strong>
+                            Técnico en Desarrollo Web
+                        </strong> y <strong>Profesor de Programación.</strong>
+                    </p>
                 </div>
-
             </div>
         </section>
+        <section id="technologies">
+            <div class="svg-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
+                    <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" />
+                    <path fill="#ef652a" d="M226 472l149-41 35-394H226" />
+                    <path fill="#ecedee"
+                        d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z" />
+                    <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z" />
+                </svg></div>
 
-        <hr>
+            <div class="svg-container" style="--content-text: 'CSS';">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
+                    <path fill="#0c73b8" d="M41 460L0 0h451l-41 460-185 52" />
+                    <path fill="#30a9dc" d="M226 472l149-41 35-394H226" />
+                    <path fill="#ecedee" d="M226 208H94l5 57h127zm0-114H84l5 56h137zm0 261l-124-33 7 60 117 32z" />
+                    <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 26-288H226v56h80l-6 58h-74z" />
+                </svg>
+            </div>
+
+            <div class="svg-container" style="--content-text: 'JavaScript';">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630">
+                    <rect width="630" height="630" fill="#f7df1e" />
+                    <path
+                        d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z" />
+                </svg>
+            </div>
+
+            <div class="svg-container" style="--content-text: 'React';">
+
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M18.6789 15.9759C18.6789 14.5415 17.4796 13.3785 16 13.3785C14.5206 13.3785 13.3211 14.5415 13.3211 15.9759C13.3211 17.4105 14.5206 18.5734 16 18.5734C17.4796 18.5734 18.6789 17.4105 18.6789 15.9759Z"
+                        fill="#53C1DE" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M24.7004 11.1537C25.2661 8.92478 25.9772 4.79148 23.4704 3.39016C20.9753 1.99495 17.7284 4.66843 16.0139 6.27318C14.3044 4.68442 10.9663 2.02237 8.46163 3.42814C5.96751 4.82803 6.73664 8.8928 7.3149 11.1357C4.98831 11.7764 1 13.1564 1 15.9759C1 18.7874 4.98416 20.2888 7.29698 20.9289C6.71658 23.1842 5.98596 27.1909 8.48327 28.5877C10.9973 29.9932 14.325 27.3945 16.0554 25.7722C17.7809 27.3864 20.9966 30.0021 23.4922 28.6014C25.9956 27.1963 25.3436 23.1184 24.7653 20.8625C27.0073 20.221 31 18.7523 31 15.9759C31 13.1835 26.9903 11.7923 24.7004 11.1537ZM24.4162 19.667C24.0365 18.5016 23.524 17.2623 22.8971 15.9821C23.4955 14.7321 23.9881 13.5088 24.3572 12.3509C26.0359 12.8228 29.7185 13.9013 29.7185 15.9759C29.7185 18.07 26.1846 19.1587 24.4162 19.667ZM22.85 27.526C20.988 28.571 18.2221 26.0696 16.9478 24.8809C17.7932 23.9844 18.638 22.9422 19.4625 21.7849C20.9129 21.6602 22.283 21.4562 23.5256 21.1777C23.9326 22.7734 24.7202 26.4763 22.85 27.526ZM9.12362 27.5111C7.26143 26.47 8.11258 22.8946 8.53957 21.2333C9.76834 21.4969 11.1286 21.6865 12.5824 21.8008C13.4123 22.9332 14.2816 23.9741 15.1576 24.8857C14.0753 25.9008 10.9945 28.557 9.12362 27.5111ZM2.28149 15.9759C2.28149 13.874 5.94207 12.8033 7.65904 12.3326C8.03451 13.5165 8.52695 14.7544 9.12123 16.0062C8.51925 17.2766 8.01977 18.5341 7.64085 19.732C6.00369 19.2776 2.28149 18.0791 2.28149 15.9759ZM9.1037 4.50354C10.9735 3.45416 13.8747 6.00983 15.1159 7.16013C14.2444 8.06754 13.3831 9.1006 12.5603 10.2265C11.1494 10.3533 9.79875 10.5569 8.55709 10.8297C8.09125 9.02071 7.23592 5.55179 9.1037 4.50354ZM20.3793 11.5771C21.3365 11.6942 22.2536 11.85 23.1147 12.0406C22.8562 12.844 22.534 13.6841 22.1545 14.5453C21.6044 13.5333 21.0139 12.5416 20.3793 11.5771ZM16.0143 8.0481C16.6054 8.66897 17.1974 9.3623 17.7798 10.1145C16.5985 10.0603 15.4153 10.0601 14.234 10.1137C14.8169 9.36848 15.414 8.67618 16.0143 8.0481ZM9.8565 14.5444C9.48329 13.6862 9.16398 12.8424 8.90322 12.0275C9.75918 11.8418 10.672 11.69 11.623 11.5748C10.9866 12.5372 10.3971 13.5285 9.8565 14.5444ZM11.6503 20.4657C10.6679 20.3594 9.74126 20.2153 8.88556 20.0347C9.15044 19.2055 9.47678 18.3435 9.85796 17.4668C10.406 18.4933 11.0045 19.4942 11.6503 20.4657ZM16.0498 23.9915C15.4424 23.356 14.8365 22.6531 14.2448 21.8971C15.4328 21.9423 16.6231 21.9424 17.811 21.891C17.2268 22.6608 16.6369 23.3647 16.0498 23.9915ZM22.1667 17.4222C22.5677 18.3084 22.9057 19.1657 23.1742 19.9809C22.3043 20.1734 21.3652 20.3284 20.3757 20.4435C21.015 19.4607 21.6149 18.4536 22.1667 17.4222ZM18.7473 20.5941C16.9301 20.72 15.1016 20.7186 13.2838 20.6044C12.2509 19.1415 11.3314 17.603 10.5377 16.0058C11.3276 14.4119 12.2404 12.8764 13.2684 11.4158C15.0875 11.2825 16.9178 11.2821 18.7369 11.4166C19.7561 12.8771 20.6675 14.4086 21.4757 15.9881C20.6771 17.5812 19.7595 19.1198 18.7473 20.5941ZM22.8303 4.4666C24.7006 5.51254 23.8681 9.22726 23.4595 10.8426C22.2149 10.5641 20.8633 10.3569 19.4483 10.2281C18.6239 9.09004 17.7698 8.05518 16.9124 7.15949C18.1695 5.98441 20.9781 3.43089 22.8303 4.4666Z"
+                        fill="#53C1DE" />
+                </svg>
+            </div>
+
+            <div class='svg-container' style="--content-text: 'TailwindCSS';">
+                <svg viewBox="0 -51 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                    <defs>
+                        <linearGradient x1="-2.77777778%" y1="32%" x2="100%" y2="67.5555556%" id="linearGradient-1">
+                            <stop stop-color="#2298BD" offset="0%">
+
+                            </stop>
+                            <stop stop-color="#0ED7B5" offset="100%">
+
+                            </stop>
+                        </linearGradient>
+                    </defs>
+                    <g>
+                        <path
+                            d="M128,-1.0658141e-14 C93.8666667,-1.0658141e-14 72.5333333,17.0666667 64,51.2 C76.8,34.1333333 91.7333333,27.7333333 108.8,32 C118.537481,34.4343704 125.497363,41.4985481 133.201067,49.3184 C145.750756,62.0567704 160.275437,76.8 192,76.8 C226.133333,76.8 247.466667,59.7333333 256,25.6 C243.2,42.6666667 228.266667,49.0666667 211.2,44.8 C201.462519,42.3656296 194.502637,35.3014519 186.798933,27.4816 C174.249244,14.7432296 159.724563,-1.0658141e-14 128,-1.0658141e-14 Z M64,76.8 C29.8666667,76.8 8.53333333,93.8666667 0,128 C12.8,110.933333 27.7333333,104.533333 44.8,108.8 C54.5374815,111.23437 61.497363,118.298548 69.2010667,126.1184 C81.7507556,138.85677 96.275437,153.6 128,153.6 C162.133333,153.6 183.466667,136.533333 192,102.4 C179.2,119.466667 164.266667,125.866667 147.2,121.6 C137.462519,119.16563 130.502637,112.101452 122.798933,104.2816 C110.249244,91.5432296 95.724563,76.8 64,76.8 Z"
+                            fill="url(#linearGradient-1)">
+
+                        </path>
+                    </g>
+                </svg>
+            </div>
+
+        </section>
+
         <section id="experience">
-            <h2>Experiencia</h2>
-
-            <div class="study-card">
-                <h3>Docente de programación</h3>
-                <p>
-                    Soy profesor de las materias de Programación I y Sistemas Electrónicos en el Centro Educativo Técnico N.30.
-                </p>
+            <div class="header-section">
+                <img src="./assets/icons/briefcase.svg" alt="Portafolio Icon" class="icon-svg">
+                <h2>Experiencia</h2>
             </div>
 
             <div class="study-card">
-                <h3>Desarrollador Web Freelance</h3>
+                <h3>Docente de Programación</h3>
                 <p>
-                    Desarrollé un sitio web para un cliente en base a sus requerimientos. Diseñé y construye con React,
-                    React Router Dom, TailwindCSS y Firebase como backend.
+                    Profesor de secundario técnico. Intentando explicar los conceptos de la formas divertida posible.
                 </p>
+                <ul>
+                    <li>Materias: Programación I (con JavaScript), Sistemas Electrónicos</li>
+                    <li>
+                        Institución:
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            Centro Educativo
+                            Técnico N.30
+                        </a>
+                    </li>
+                    <li>Todos los cursos son de cuarto año.</li>
+                </ul>
+            </div>
+
+            <div class="study-card">
+                <h3>Desarrollador Web Freelancer</h3>
+                <p>Creación de un proyecto freelance con una duración de 3 meses. (Actualmente etapa de mantenimiento)
+                </p>
+                <ul>
+                    <li>Levanté los requerimientos.</li>
+                    <li>Con Figma diseñé un prototipo del sitio para ofrecerle al cliente una referencia visual de la
+                        estructura de su página web.</li>
+                    <li>Desarrollé los componentes necesarios y el enrutamiento con React y React Router DOM.</li>
+                    <li>Como backend elegí Firebase. Para el formulario de contacto usé Formspree.</li>
+                    <li>Desplegué con el hosting de donweb.com.</li>
+                </ul>
             </div>
         </section>
         <section id="studies">
-            <h2>Estudios</h2>
+            <div class="header-section">
+                <img src="./assets/icons/graduation-cap.svg" alt="Portafolio Icon" class="icon-svg">
+                <h2>Estudios</h2>
+            </div>
 
             <div class="study-card">
                 <h3>Instituto Técnico Superior</h3>
                 <p>
-                    Actualmente soy de ayudante de cátedra en las materias de Programación y Base de
-                    Datos.
+                    Terciario superior orientado al Desarrollo Web Full Stack
+                <ul>
+                    <li>Soy de ayudante de cátedra en las materias de Programación y Base de
+                        Datos.</li>
+                </ul>
 
-                    Técnico Superior en Desarrollo de Software Full Stack
                 </p>
             </div>
 
@@ -78,52 +160,72 @@
                 <h3>Centro Educativo Técnico N.30</h3>
                 <p>
                     Secundario Técnico con Orientación en Programación y Desarrollo Web.
-                    Aqui aprendí las bases de la web, Angular, Firebase, SQL, XAMPP y desarrollé habilidades blandas.
                 </p>
+                <ul>
+                    <li>Aprendí a resolver problemas con PSeInt.</li>
+                    <li>Adquirí las tecnologías base para la web (HTML, CSS y JavaScript)</li>
+                    <li>Bases de datos: Diagramar DER, MER, MySQL y XAMMP. Gestor de base de datos PhpMyAdmin.</li>
+                    <li>Usé frameworks como Angular, PrimeNG, Angular Material y Bootstrap.</li>
+                    <li>Utilicé base de datos NoSQL y Backend as a Service como Firebase y Firestore.</li>
+                    <li>Como SCRUM Master lideré un equipo de tres para la materia Prácticas Profesionalizantes, donde
+                        desarrollamos un sitio web para la Liga Deportiva Confluencia.</li>
+                </ul>
             </div>
         </section>
         <section id="projects">
-            <h2>Proyectos</h2>
+            <div class="header-section">
+                <img src="./assets/icons/rocket.svg" alt="Proyectos Icon" class="icon-svg">
+                <h2>Proyectos</h2>
+            </div>
             <div class="cards">
                 <div class="card">
-                    <img src="./img/projects/valle-intimo.webp" loading="lazy">
+                    <div class="background-img">
+                        <img src="./img/projects/valle-intimo.webp" loading="lazy">
+                    </div>
                     <div class="card-description">
                         <h3>Valle Intimo</h3>
-                        <p>Sitio web desarrollado para un cliente en mi rol de freelancer. Construido con React, React
-                            Router DOM para las rutas y Firebase como backend.
+                        <p>Es un sitio web de anuncios clasificadas +18. Adaptada a todos los requerimientos del
+                            cliente.
                         </p>
-                        <a href="https://valleintimo.ar" target="_blank">Ver Proyecto</a>
+                        <a href="https://valleintimo.ar" target="_blank"
+                            referrerpolicy="no-referrer noopener">Visitar</a>
 
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./img/projects/liga-deportiva-confluencia.webp">
+                    <div class="background-img">
+                        <img src="./img/projects/liga-deportiva-confluencia.webp" loading="lazy">
+                    </div>
                     <div class="card-description" loading="lazy">
                         <h3>Liga Deportiva Confluencia</h3>
-                        <p>Web app para un torneo de futbol regional, proyecto final de practicas profecionalizantes en
-                            mi secundario técnico. Desarrollado con Angular, Angular Material y Firebase como backend.
+                        <p>Web app para un torneo de futbol regional, proyecto final de Prácticas Profecionalizantes.
                         </p>
-                        <a href="https://lighthearted-mochi-0d87c0.netlify.app/" target="_blank">Ver Proyecto</a>
+                        <a href="https://valleintimo.ar" target="_blank"
+                            referrerpolicy="no-referrer noopener">Visitar</a>
 
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./img/projects/m&agallery.webp" loading="lazy">
+                    <div class="background-img">
+                        <img src="./img/projects/m&agallery.webp" loading="lazy">
+                    </div>
                     <div class="card-description">
                         <h3>M&A Gallery</h3>
                         <p>Galeria de fotos con un diseño minimalista, es un proyecto personal, construido con HTML y
                             CSS vanilla.
                         </p>
-                        <a href="https://fluffy-zabaione-c02d0e.netlify.app/" target="_blank">Ver Proyecto</a>
+                        <a href="https://valleintimo.ar" target="_blank"
+                            referrerpolicy="no-referrer noopener">Visitar</a>
                     </div>
                 </div>
             </div>
         </section>
+        <footer>
+            <p>&copy; 2024 Alexis Valdivia. Algún que otro derecho reservado.</p>
+        </footer>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Alexis Valdivia. Algún que otro derecho reservado.</p>
-    </footer>
+
 </body>
 
 </html>
