@@ -5,6 +5,7 @@
          text-wrap: pretty;
          font-family: Verdana, Geneva, Tahoma, sans-serif;
          text-decoration: none;
+         color-scheme: light dark;
 
          & p {
              line-height: 1.5;
@@ -35,38 +36,17 @@
          }
      }
 
+     html {
+         scroll-behavior: smooth;
+     }
+
      body {
          display: flex;
          flex-direction: row;
          justify-content: center;
      }
 
-     aside {
-         background-color: #353353;
-         width: 5%;
-         min-height: 100vh;
-         position: fixed;
-         display: flex;
-         flex-flow: column nowrap;
-         justify-content: center;
-         align-items: center;
-         left: 0;
 
-         & a {
-             padding: 5px;
-             border-radius: 99999px;
-             background-color: #fff;
-             margin: 10px;
-             width: 70%;
-             flex-grow: 0;
-             flex-shrink: 0;
-             margin: 1rem auto;
-
-             &:hover {
-                 scale: 0.9;
-             }
-         }
-     }
 
      main {
          max-width: 70%;
@@ -89,6 +69,10 @@
                  width: 2.5rem;
              }
          }
+
+         background-color: transparent;
+
+
      }
 
      @keyframes scaler {
@@ -105,6 +89,28 @@
          }
      }
 
+     nav {
+         padding: 5px;
+         min-width: 100%;
+         background-color: #353353;
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: center;
+         gap: 42px;
+         font-size: 0.75rem;
+         box-sizing: border-box;
+
+         & a {
+             text-decoration: none;
+             color: #f0f0fe;
+             padding: 1px;
+
+             &:hover {
+                opacity: 0.8;
+             }
+         }
+     }
+
      .profile {
          display: flex;
          flex-direction: row;
@@ -113,7 +119,6 @@
          padding: 5rem;
          background-color: #353353;
          color: #ddd;
-         border-radius: 25px 25px 0 0;
          max-width: 100%;
 
 
@@ -286,7 +291,7 @@
                  flex-shrink: 0;
                  flex-grow: 1;
 
-                 background-color: #f7ddcc;
+                 background-color: #353353;
                  position: relative;
                  overflow: hidden;
                  border-radius: 10px;
@@ -339,7 +344,7 @@
                      transition: 100ms all;
 
                      &:hover {
-                        margin-right: 10px;
+                         margin-right: 10px;
                      }
                  }
 
@@ -356,7 +361,7 @@
          margin: auto;
          background-color: #353353;
          color: white;
-         border-radius: 0 0 25px 25px;
+         border-radius: 10px;
 
          & p {
              font-size: 0.75rem;
