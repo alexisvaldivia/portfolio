@@ -67,6 +67,7 @@
 
              .icon-svg {
                  width: 2.5rem;
+                 height: auto;
              }
          }
 
@@ -431,8 +432,7 @@
                      flex-wrap: wrap;
 
                      & .background-img {
-                         height: unset;
-                         width: unset;
+
                          flex-grow: 1;
                          flex-basis: 300px;
                      }
