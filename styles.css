@@ -135,6 +135,10 @@
          }
 
          & .description {
+             display: flex;
+             flex-flow: column wrap;
+             gap: 1rem;
+
              & h1 {
                  flex-wrap: wrap;
                  display: flex;
@@ -142,8 +146,7 @@
                  justify-content: left;
                  flex-direction: row;
                  text-wrap: nowrap;
-                 gap: 0.25rem;
-                 padding: 2rem 0;
+                 gap: 10px;
 
 
                  & span {
@@ -181,7 +184,6 @@
                  display: flex;
                  flex: 1fr 1fr 1fr;
                  gap: 1rem;
-                 padding: 2rem 0;
 
                  & a {
                      color: #f0f0fe;
@@ -220,9 +222,7 @@
              width: 3rem;
              position: relative;
 
-
              &:hover {
-
                  &:after {
                      content: var(--content-text);
                      position: absolute;
@@ -297,19 +297,20 @@
              flex-wrap: wrap;
              flex-direction: column;
              gap: 3rem;
-             width: 100%;
+             min-width: 100%;
          }
 
          & .card {
              display: flex;
              flex-direction: row;
              gap: 1rem;
+             min-width: 100%;
 
              & .background-img {
                  width: 300px;
                  height: 200px;
                  flex-shrink: 0;
-                 flex-grow: 1;
+                 flex-grow: 0;
 
                  background-color: #353353;
                  position: relative;
@@ -318,7 +319,7 @@
 
                  & img {
                      max-width: 100%;
-                     min-height: 100%;
+                     min-width: 100%;
                      min-height: 100%;
                      max-height: 100%;
                      right: 0;
@@ -344,6 +345,7 @@
                  align-items: start;
                  justify-content: start;
                  gap: 10px;
+                 flex-grow: 1;
 
                  & p {
                      font-weight: lighter;
@@ -399,14 +401,25 @@
              justify-content: center;
              font-size: 1rem;
 
+             & img {
+                 flex-shrink: 1;
+             }
+
              & .description {
                  & h1 {
                      justify-content: center;
+                     flex-flow: column wrap;
+                     flex-shrink: 1;
                  }
 
                  & p {
                      font-size: 1rem;
                  }
+             }
+
+             & .links-description {
+                 justify-content: center;
+                 flex-flow: row wrap;
              }
          }
 
@@ -422,15 +435,6 @@
                          width: unset;
                          flex-grow: 1;
                          flex-basis: 300px;
-
-                         img {
-                             left: 50%;
-                             transform: translate(-50%, 30%);
-
-                             &:hover {
-                                 transform: translate(-50%, 10%);
-                             }
-                         }
                      }
                  }
 
