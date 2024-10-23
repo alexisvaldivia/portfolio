@@ -311,7 +311,7 @@
                  min-width: 300px;
                  min-height: 200px;
                  flex-shrink: 0;
-                 flex-grow: 1;
+                 flex-grow: 0;
                  background-color: #353353;
                  position: relative;
                  overflow: hidden;
