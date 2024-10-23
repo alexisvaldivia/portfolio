@@ -160,7 +160,7 @@
                  & a {
                      font-size: 0.8rem;
                      text-decoration: none;
-                     font-weight: 100;
+                     font-weight: 00;
                      background-color: #a7f3d0;
                      color: black;
                      padding: 7px;
@@ -308,11 +308,10 @@
              min-width: 100%;
 
              & .background-img {
-                 width: 300px;
-                 height: 200px;
+                 min-width: 300px;
+                 min-height: 200px;
                  flex-shrink: 0;
-                 flex-grow: 0;
-
+                 flex-grow: 1;
                  background-color: #353353;
                  position: relative;
                  overflow: hidden;
@@ -349,7 +348,7 @@
                  flex-grow: 1;
 
                  & p {
-                     font-weight: lighter;
+                     font-weight: 400;
                      color: #000000a1;
                      flex-grow: 0;
                      flex-shrink: 0;
@@ -411,6 +410,7 @@
                      justify-content: center;
                      flex-flow: column wrap;
                      flex-shrink: 1;
+                     flex-grow: 1;
                  }
 
                  & p {
