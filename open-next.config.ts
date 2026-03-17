@@ -11,6 +11,7 @@ const config: OpenNextConfig = {
       queue: "dummy",
     },
   },
+  edgeExternals: ["node:crypto"], // Agregamos esto para cumplir con el esquema del error
   middleware: {
     external: true,
     override: {
