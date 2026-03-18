@@ -2,40 +2,19 @@
 
 import { useState } from 'react';
 import { useLanguage } from '@/components/language-provider';
+import { useForm, ValidationError } from '@formspree/react';
+import { Satellite } from 'lucide-react';
 
 export function Contact() {
 	const { t } = useLanguage();
+
+	const [state, handleSubmit] = useForm('xgonppwv');
+
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
 		message: '',
 	});
-	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [submitted, setSubmitted] = useState(false);
-
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
-		setIsSubmitting(true);
-
-		// Simulate form submission
-		await new Promise((resolve) => setTimeout(resolve, 1000));
-
-		setIsSubmitting(false);
-		setSubmitted(true);
-		setFormData({ name: '', email: '', message: '' });
-
-		// Reset success message after 5 seconds
-		setTimeout(() => setSubmitted(false), 5000);
-	};
-
-	const handleChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-	) => {
-		setFormData((prev) => ({
-			...prev,
-			[e.target.name]: e.target.value,
-		}));
-	};
 
 	return (
 		<section id="contact" className="py-24 px-6">
@@ -125,11 +104,14 @@ export function Contact() {
 									type="text"
 									id="name"
 									name="name"
-									value={formData.name}
-									onChange={handleChange}
 									required
 									className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
 									placeholder={t.contact.namePlaceholder}
+								/>
+								<ValidationError
+									prefix="Name"
+									field="name"
+									errors={state.errors}
 								/>
 							</div>
 
@@ -144,11 +126,14 @@ export function Contact() {
 									type="email"
 									id="email"
 									name="email"
-									value={formData.email}
-									onChange={handleChange}
 									required
 									className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
 									placeholder={t.contact.emailPlaceholder}
+								/>
+								<ValidationError
+									prefix="Email"
+									field="email"
+									errors={state.errors}
 								/>
 							</div>
 
@@ -162,21 +147,24 @@ export function Contact() {
 								<textarea
 									id="message"
 									name="message"
-									value={formData.message}
-									onChange={handleChange}
 									required
 									rows={5}
 									className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors resize-none"
 									placeholder={t.contact.messagePlaceholder}
 								/>
+								<ValidationError
+									prefix="Message"
+									field="message"
+									errors={state.errors}
+								/>
 							</div>
 
 							<button
 								type="submit"
-								disabled={isSubmitting}
+								disabled={state.submitting}
 								className="w-full px-6 py-3 bg-foreground text-background font-medium rounded-lg hover:bg-foreground/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
 							>
-								{isSubmitting ? (
+								{state.submitting ? (
 									<>
 										<svg
 											className="animate-spin w-4 h-4"
@@ -204,7 +192,7 @@ export function Contact() {
 								)}
 							</button>
 
-							{submitted && (
+							{state.succeeded && (
 								<p className="text-accent text-sm text-center">
 									{t.contact.success}
 								</p>
