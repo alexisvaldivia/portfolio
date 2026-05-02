@@ -24,9 +24,13 @@ export function Hero() {
 							{t.hero.headline}
 						</h1>
 
-						<p className="mt-8 text-muted-foreground text-lg leading-relaxed max-w-2xl">
-							{t.hero.description}
-						</p>
+					<p className="mt-8 text-muted-foreground text-lg leading-relaxed max-w-2xl">
+						{t.hero.description}
+					</p>
+
+					<p className="mt-4 text-accent font-mono text-sm tracking-wide">
+						{t.hero.experience}
+					</p>
 					</div>
 
 					{/* Photo */}

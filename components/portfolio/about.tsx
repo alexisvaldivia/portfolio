@@ -70,6 +70,17 @@ export function About() {
               <div className="space-y-4">
                 <div>
                   <div className="flex items-center justify-between mb-1">
+                    <span className="text-foreground font-medium">{t.about.freelance.title}</span>
+                    <span className="text-sm text-muted-foreground">{t.about.freelance.period}</span>
+                  </div>
+                  <ul className="mt-2 space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                    {t.about.freelance.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <div className="flex items-center justify-between mb-1">
                     <span className="text-foreground font-medium">Docente</span>
                     <span className="text-sm text-muted-foreground">2024 — 2026</span>
                   </div>

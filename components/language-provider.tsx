@@ -21,6 +21,7 @@ interface Translations {
 		headline: string;
 		headlineItalic: string;
 		description: string;
+		experience: string;
 		viewProjects: string;
 		getInTouch: string;
 	};
@@ -33,6 +34,11 @@ interface Translations {
 		skills: string;
 		experience: string;
 		present: string;
+		freelance: {
+			title: string;
+			period: string;
+			bullets: string[];
+		};
 	};
 	projects: {
 		label: string;
@@ -101,6 +107,7 @@ const translations: Record<Language, Translations> = {
 			headline: 'Turning ideas into reliable software.',
 			description:
 				"I'm a developer focused on creating useful and thoughtful solutions for users.",
+			experience: '2+ years of experience in frontend and backend web projects.',
 			viewProjects: 'View projects',
 			getInTouch: 'Contact',
 		},
@@ -113,6 +120,18 @@ const translations: Record<Language, Translations> = {
 			skills: 'Skills & Technologies',
 			experience: 'Experience',
 			present: 'Present',
+			freelance: {
+				title: 'Freelance Web Developer',
+				period: '2024 — Present',
+				bullets: [
+					'Full-stack web application development using React and Express',
+					'Implementation of authentication and database management',
+					'Consumption and integration of REST APIs',
+					'Design of responsive interfaces focused on UX',
+					'Deployment and maintenance of applications',
+					'Direct client communication and requirements management',
+				],
+			},
 		},
 		projects: {
 			label: 'Selected Work',
@@ -186,6 +205,7 @@ const translations: Record<Language, Translations> = {
 			headline: 'Siguiendo mi pasión, construyendo software.',
 			description:
 				'Soy un desarrollador que se esfuerza por crear soluciones útiles para los usuarios.',
+			experience: '+2 años de experiencia en proyectos web frontend y backend.',
 			viewProjects: 'Ver proyectos',
 			getInTouch: 'Contactar',
 		},
@@ -198,6 +218,18 @@ const translations: Record<Language, Translations> = {
 			skills: 'Habilidades y tecnologías',
 			experience: 'Experiencia',
 			present: 'Presente',
+			freelance: {
+				title: 'Desarrollador Web Freelance',
+				period: '2024 — Actualidad',
+				bullets: [
+					'Desarrollo de aplicaciones web full stack utilizando React y Express',
+					'Implementación de autenticación y manejo de base de datos',
+					'Consumo e integración de APIs REST',
+					'Diseño de interfaces responsivas enfocadas en UX',
+					'Deploy y mantenimiento de aplicaciones',
+					'Comunicación directa con clientes y gestión de requerimientos',
+				],
+			},
 		},
 		projects: {
 			label: 'Trabajo seleccionado',
