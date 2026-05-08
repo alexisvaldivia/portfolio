@@ -1,20 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { useLanguage } from '@/components/language-provider';
 import { useForm, ValidationError } from '@formspree/react';
-import { Satellite } from 'lucide-react';
 
 export function Contact() {
 	const { t } = useLanguage();
+	const [state, handleSubmit, reset] = useForm('xgonppwv');
 
-	const [state, handleSubmit] = useForm('xgonppwv');
-
-	const [formData, setFormData] = useState({
-		name: '',
-		email: '',
-		message: '',
-	});
+	useEffect(() => {
+		if (state.succeeded) {
+			reset();
+		}
+	}, [state.succeeded, reset]);
 
 	return (
 		<section id="contact" className="py-24 px-6">
@@ -100,14 +98,14 @@ export function Contact() {
 								>
 									{t.contact.name}
 								</label>
-								<input
-									type="text"
-									id="name"
-									name="name"
-									required
-									className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
-									placeholder={t.contact.namePlaceholder}
-								/>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								required
+								className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
+								placeholder={t.contact.namePlaceholder}
+							/>
 								<ValidationError
 									prefix="Name"
 									field="name"
@@ -122,14 +120,14 @@ export function Contact() {
 								>
 									{t.contact.email}
 								</label>
-								<input
-									type="email"
-									id="email"
-									name="email"
-									required
-									className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
-									placeholder={t.contact.emailPlaceholder}
-								/>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required
+								className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
+								placeholder={t.contact.emailPlaceholder}
+							/>
 								<ValidationError
 									prefix="Email"
 									field="email"
@@ -144,14 +142,14 @@ export function Contact() {
 								>
 									{t.contact.message}
 								</label>
-								<textarea
-									id="message"
-									name="message"
-									required
-									rows={5}
-									className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors resize-none"
-									placeholder={t.contact.messagePlaceholder}
-								/>
+							<textarea
+								id="message"
+								name="message"
+								required
+								rows={5}
+								className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors resize-none"
+								placeholder={t.contact.messagePlaceholder}
+							/>
 								<ValidationError
 									prefix="Message"
 									field="message"
@@ -159,11 +157,11 @@ export function Contact() {
 								/>
 							</div>
 
-							<button
-								type="submit"
-								disabled={state.submitting}
-								className="w-full px-6 py-3 bg-foreground text-background font-medium rounded-lg hover:bg-foreground/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
-							>
+						<button
+							type="submit"
+							disabled={state.submitting}
+							className="w-full px-6 py-3 bg-foreground text-background font-medium rounded-lg hover:bg-foreground/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+						>
 								{state.submitting ? (
 									<>
 										<svg
