@@ -18,26 +18,26 @@ export function Hero() {
 						</p>
 
 						<h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-foreground leading-tight tracking-tight text-balance">
+							{t.hero.headline}
 							<span className="italic text-muted-foreground">
 								{t.hero.headlineItalic}
 							</span>{' '}
-							{t.hero.headline}
 						</h1>
 
-					<p className="mt-8 text-muted-foreground text-lg leading-relaxed max-w-2xl">
-						{t.hero.description}
-					</p>
+						<p className="mt-8 text-muted-foreground text-lg leading-relaxed max-w-2xl">
+							{t.hero.description}
+						</p>
 
-					<p className="mt-4 text-accent font-mono text-sm tracking-wide">
-						{t.hero.experience}
-					</p>
+						<p className="mt-4 text-accent font-mono text-sm tracking-wide">
+							{t.hero.experience}
+						</p>
 					</div>
 
 					{/* Photo */}
 					<div className="flex-shrink-0">
 						<div className="relative w-40 h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-2xl overflow-hidden bg-secondary border border-border">
 							<Image
-								src="/profile.jpg"
+								src="/profile.webp"
 								alt="Profile photo"
 								fill
 								className="object-cover"
@@ -99,7 +99,6 @@ export function Hero() {
 							<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
 						</svg>
 					</a>
-
 				</div>
 			</div>
 		</section>

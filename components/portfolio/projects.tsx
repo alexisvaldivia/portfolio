@@ -12,7 +12,7 @@ export function Projects() {
 		{
 			title: t.projects.taskflow.title,
 			description: t.projects.taskflow.description,
-			image: '/projects/pre-enrollment-module.png',
+			image: '/projects/pre-enrollment-module.webp',
 			tags: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose'],
 			liveUrl: '',
 			codeUrl: 'https://github.com/alexisvaldivia/modulo-pre-inscripcion-its',
@@ -20,7 +20,7 @@ export function Projects() {
 		{
 			title: t.projects.artisan.title,
 			description: t.projects.artisan.description,
-			image: '/projects/alto-valle-impulsa.png',
+			image: '/projects/alto-valle-impulsa.webp',
 			tags: [
 				'JavaScript',
 				'Node.js',

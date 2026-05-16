@@ -84,7 +84,9 @@ export function About() {
                     <span className="text-foreground font-medium">Docente</span>
                     <span className="text-sm text-muted-foreground">2024 — 2026</span>
                   </div>
-                  <span className="text-sm text-accent">Centro Educativo Técnico N.30 (CET N.30)</span>
+                  <ul className="mt-2 space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                    <li>Centro Educativo Técnico N.30 (CET N.30)</li>
+                  </ul>
                 </div>
               </div>
             </div>

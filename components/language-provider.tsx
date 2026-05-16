@@ -17,7 +17,6 @@ interface Translations {
 		contact: string;
 	};
 	hero: {
-		role: string;
 		headline: string;
 		headlineItalic: string;
 		description: string;
@@ -102,12 +101,12 @@ const translations: Record<Language, Translations> = {
 			contact: 'Contact',
 		},
 		hero: {
-			role: 'Full-Stack Web Developer',
-			headlineItalic: 'Imagining, planning and building',
-			headline: 'Turning ideas into reliable software.',
+			headlineItalic: 'Alexis Valdivia',
+			headline: 'Full-Stack Developer',
 			description:
 				"I'm a developer focused on creating useful and thoughtful solutions for users.",
-			experience: '2+ years of experience in frontend and backend web projects.',
+			experience:
+				'2+ years of experience in frontend and backend web projects.',
 			viewProjects: 'View projects',
 			getInTouch: 'Contact',
 		},
@@ -200,9 +199,8 @@ const translations: Record<Language, Translations> = {
 			contact: 'Contacto',
 		},
 		hero: {
-			role: 'Desarrollador web full-stack',
-			headlineItalic: 'Imaginando, planificando y creando',
-			headline: 'Siguiendo mi pasión, construyendo software.',
+			headlineItalic: 'Alexis Valdivia',
+			headline: 'Desarrollador Full Stack',
 			description:
 				'Soy un desarrollador que se esfuerza por crear soluciones útiles para los usuarios.',
 			experience: '+2 años de experiencia en proyectos web frontend y backend.',
