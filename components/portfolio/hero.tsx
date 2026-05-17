@@ -13,15 +13,15 @@ export function Hero() {
 				<div className="flex flex-col-reverse md:flex-row md:items-center gap-8 md:gap-12">
 					{/* Text content */}
 					<div className="flex-1">
-						<p className="text-accent text-sm font-mono mb-4 tracking-wider">
+						{/* <p className="text-accent text-sm font-mono mb-4 tracking-wider">
 							{t.hero.role}
-						</p>
+						</p> */}
 
 						<h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-foreground leading-tight tracking-tight text-balance">
-							{t.hero.headline}
-							<span className="italic text-muted-foreground">
+							<span className="italic text-muted-foreground mr-2.5">
 								{t.hero.headlineItalic}
-							</span>{' '}
+							</span> {' '}
+							{t.hero.headline}
 						</h1>
 
 						<p className="mt-8 text-muted-foreground text-lg leading-relaxed max-w-2xl">
