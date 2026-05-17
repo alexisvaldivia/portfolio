@@ -20,8 +20,8 @@ export function Hero() {
 						<h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-foreground leading-tight tracking-tight text-balance">
 							<span className="italic text-muted-foreground mr-2.5">
 								{t.hero.headlineItalic}
-							</span> {' '}
-							{t.hero.headline}
+							</span>{' '}
+							<span className='sm:text-nowrap'>{t.hero.headline}</span>
 						</h1>
 
 						<p className="mt-8 text-muted-foreground text-lg leading-relaxed max-w-2xl">
