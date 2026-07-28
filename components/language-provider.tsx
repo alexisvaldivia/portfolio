@@ -73,6 +73,10 @@ interface Translations {
 			title: string;
 			description: string;
 		};
+		valledeoficios: {
+			title: string;
+			description: string;
+		};
 	};
 	contact: {
 		label: string;
@@ -172,6 +176,11 @@ const translations: Record<Language, Translations> = {
 				description:
 					'Personal finance app with expense categorization and insights.',
 			},
+			valledeoficios: {
+				title: 'Valle de Oficios',
+				description:
+					'Platform connecting clients with qualified professionals in the Valley. Features service search, direct chat, and secure payments.',
+			},
 		},
 		contact: {
 			label: 'Contact',
@@ -268,6 +277,11 @@ const translations: Record<Language, Translations> = {
 				title: 'Rastreador de gastos',
 				description:
 					'Aplicación de finanzas personales con categorización de gastos e informes.',
+			},
+			valledeoficios: {
+				title: 'Valle de Oficios',
+				description:
+					'Plataforma de conexión entre clientes y trabajadores calificados en el Valle. Incluye búsqueda de servicios, chat directo y pago protegido.',
 			},
 		},
 		contact: {

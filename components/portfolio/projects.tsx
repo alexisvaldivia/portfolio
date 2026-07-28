@@ -8,7 +8,21 @@ export function Projects() {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 	const { t } = useLanguage();
 
-	const featuredProjects = [
+	const featuredProjects: {
+		title: string;
+		description: string;
+		image: string;
+		tags: string[];
+		liveUrl: string;
+		codeUrl?: string;
+	}[] = [
+		{
+			title: t.projects.valledeoficios.title,
+			description: t.projects.valledeoficios.description,
+			image: '/projects/valle-de-oficios.webp',
+			tags: ['Next.js', 'Supabase', 'TypeScript'],
+			liveUrl: 'https://valledeoficios-production.up.railway.app/',
+		},
 		{
 			title: t.projects.taskflow.title,
 			description: t.projects.taskflow.description,
@@ -146,23 +160,25 @@ export function Projects() {
 												<path d="M7 17L17 7M17 7H7M17 7V17" />
 											</svg>
 										</a>
-										<a
-											href={project.codeUrl}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="inline-flex items-center text-sm text-foreground hover:text-accent transition-colors"
-										>
-											{t.projects.code}
-											<svg
-												className="ml-1 w-4 h-4"
-												viewBox="0 0 24 24"
-												fill="none"
-												stroke="currentColor"
-												strokeWidth="2"
+										{project.codeUrl && (
+											<a
+												href={project.codeUrl}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center text-sm text-foreground hover:text-accent transition-colors"
 											>
-												<path d="M7 17L17 7M17 7H7M17 7V17" />
-											</svg>
-										</a>
+												{t.projects.code}
+												<svg
+													className="ml-1 w-4 h-4"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													strokeWidth="2"
+												>
+													<path d="M7 17L17 7M17 7H7M17 7V17" />
+												</svg>
+											</a>
+										)}
 									</div>
 								</div>
 							</div>
